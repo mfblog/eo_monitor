@@ -1399,11 +1399,11 @@
 
             let color = '#3b82f6';
             const lowerName = metricName.toLowerCase();
-            if (lowerName.includes('country') || lowerName.includes('uadevice')) color = '#3b82f6';
-            else if (lowerName.includes('province') || lowerName.includes('resourcetype')) color = '#f59e0b';
+            if (lowerName.includes('country')) color = '#3b82f6';
+            else if (lowerName.includes('province') || lowerName.includes('resourcetype') || lowerName.includes('browser')) color = '#f59e0b';
             else if (lowerName.includes('statuscode') || lowerName.includes('referer') || lowerName.endsWith('_ua')) color = '#8b5cf6';
-            else if (lowerName.includes('domain') || lowerName.includes('uabrowser')) color = '#06b6d4';
-            else if (lowerName.includes('url') || lowerName.includes('uaos')) color = '#10b981';
+            else if (lowerName.includes('domain') || lowerName.includes('device')) color = '#06b6d4';
+            else if (lowerName.includes('url') || lowerName.includes('os')) color = '#10b981';
             else if (lowerName.includes('sip')) color = '#ef4444';
 
             const option = {
@@ -1465,10 +1465,10 @@
             renderTopChart(results, chartTopUrl, 'l7Flow_outFlux_url');
             renderTopChart(results, chartTopResourceType, 'l7Flow_outFlux_resourceType');
             renderTopChart(results, chartTopSip, 'l7Flow_outFlux_sip');
-            renderTopChart(results, chartTopReferer, 'l7Flow_outFlux_referer');
-            renderTopChart(results, chartTopUaDevice, 'l7Flow_outFlux_uaDevice');
-            renderTopChart(results, chartTopUaBrowser, 'l7Flow_outFlux_uaBrowser');
-            renderTopChart(results, chartTopUaOs, 'l7Flow_outFlux_uaOs');
+            renderTopChart(results, chartTopReferer, 'l7Flow_outFlux_referers');
+            renderTopChart(results, chartTopUaDevice, 'l7Flow_outFlux_ua_device');
+            renderTopChart(results, chartTopUaBrowser, 'l7Flow_outFlux_ua_browser');
+            renderTopChart(results, chartTopUaOs, 'l7Flow_outFlux_ua_os');
             renderTopChart(results, chartTopUa, 'l7Flow_outFlux_ua');
 
             // Request Charts
@@ -1479,10 +1479,10 @@
             renderTopChart(results, chartTopRequestUrl, 'l7Flow_request_url');
             renderTopChart(results, chartTopRequestResourceType, 'l7Flow_request_resourceType');
             renderTopChart(results, chartTopRequestSip, 'l7Flow_request_sip');
-            renderTopChart(results, chartTopRequestReferer, 'l7Flow_request_referer');
-            renderTopChart(results, chartTopRequestUaDevice, 'l7Flow_request_uaDevice');
-            renderTopChart(results, chartTopRequestUaBrowser, 'l7Flow_request_uaBrowser');
-            renderTopChart(results, chartTopRequestUaOs, 'l7Flow_request_uaOs');
+            renderTopChart(results, chartTopRequestReferer, 'l7Flow_request_referers');
+            renderTopChart(results, chartTopRequestUaDevice, 'l7Flow_request_ua_device');
+            renderTopChart(results, chartTopRequestUaBrowser, 'l7Flow_request_ua_browser');
+            renderTopChart(results, chartTopRequestUaOs, 'l7Flow_request_ua_os');
             renderTopChart(results, chartTopRequestUa, 'l7Flow_request_ua');
         }
 
